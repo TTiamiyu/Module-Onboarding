@@ -33,8 +33,9 @@ body {
   font: var(--font);
   padding-bottom: 80px;
 }
-h1{
-  text-align: left;
+header {
+  text-align: center;
+  margin-bottom: calc(var(--space) * 2);
 }
 a {
   padding: var(--space);
@@ -70,11 +71,16 @@ Play with the options that come up.
 https://developer.chrome.com/docs/devtools/css/grid
 https://gridbyexample.com/learn/
 */
+/* ====== Articles Grid Layout ==== */
 main {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr; 
   gap: var(--space);
-  }
+}
+
+main > *:first-child {
+  grid-column: span 2;
+}
 }
 /* ====== Article Layout ====== 
 Setting the rules for how elements are placed in the article. 
