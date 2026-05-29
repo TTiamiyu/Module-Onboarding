@@ -1,21 +1,3 @@
-/* Here are some starter styles
-You can edit these or replace them entirely 
-It's showing you a common way to organize CSS 
-And includes solutions to common problems 
-As well as useful links to learn more */
-
-/* ====== Design Palette ======
- This is our "design palette".
- It sets out the colors, fonts, styles etc to be used in this design 
- At work, a designer will give these to you based on the corporate brand, but while you are learning
- You can design it yourself if you like
- Inspect the starter design with Devtools
- Click on the color swatches to see what is happening
- I've put some useful CSS you won't have learned yet
- For you to explore and play with if you are interested
- https://web.dev/articles/min-max-clamp
- https://scrimba.com/learn-css-variables-c026
-====== Design Palette ====== */
 :root {
   --color: #0056b3;
   --paper: oklch(98 0 0);
@@ -25,8 +7,7 @@ As well as useful links to learn more */
   --line: 1px solid;
   --container: 1280px;
 }
-/* ====== Base Elements ======
- General rules for basic HTML elements in any context */
+
 body {
   background: var(--paper);
   color: var(--ink);
@@ -47,10 +28,7 @@ svg {
   width: 100%;
   object-fit: cover;
 }
-/* ====== Site Layout ====== 
-Setting the overall rules for page regions
-https://www.w3.org/WAI/tutorials/page-structure/regions/
-*/
+
 main {
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
@@ -64,14 +42,7 @@ footer {
   padding: var(--space) 0;
   border-top: var(--line);
 }
-/* ====== Articles Grid Layout ====
-Setting the rules for how articles are placed in the main element.
-Inspect this in Devtools and click the "grid" button in the Elements view
-Play with the options that come up.
-https://developer.chrome.com/docs/devtools/css/grid
-https://gridbyexample.com/learn/
-*/
-/* ====== Articles Grid Layout ==== */
+
 main {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -81,22 +52,41 @@ main {
 main > *:first-child {
   grid-column: span 2;
 }
-}
-/* ====== Article Layout ====== 
-Setting the rules for how elements are placed in the article. 
-Now laying out just the INSIDE of the repeated card/article design.
-Keeping things orderly and separate is the key to good, simple CSS.
-*/
+
 article {
   border: var(--line);
   padding-bottom: var(--space);
   text-align: left;
   display: grid;
   grid-template-columns: var(--space) 1fr var(--space);
-  > * {
+ article > * {
     grid-column: 2/3;
   }
-  > img {
+  article > img {
     grid-column: 1 / -1;
   }
+}
+
+summary {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f4f4f4; 
+  border-radius: 5px;
+  list-style: none; 
+  font-weight: bold;
+  summary:hover {
+  background-color: #e0e0e0;
+}
+
+summary:focus-visible {
+  outline: 2px solid var(--color);
+  outline-offset: 2px;
+}
+}
+
+details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
