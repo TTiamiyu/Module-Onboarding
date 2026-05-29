@@ -19,9 +19,8 @@ header {
   margin-bottom: calc(var(--space) * 2);
 }
 a {
-  padding: var(--space);
-  border: var(--line);
   max-width: fit-content;
+  text-decoration: underline;
 }
 img,
 svg {
@@ -45,8 +44,10 @@ footer {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: var(--space);
+  max-width: var(--container);
+  margin: 0 auto;
 }
 
 main > *:first-child {
@@ -57,14 +58,18 @@ article {
   border: var(--line);
   padding-bottom: var(--space);
   text-align: left;
-  display: grid;
-  grid-template-columns: var(--space) 1fr var(--space);
- article > * {
-    grid-column: 2/3;
-  }
-  article > img {
-    grid-column: 1 / -1;
-  }
+  display: flex; 
+  flex-direction: column;
+  gap: var(--space);
+}
+article img {
+  width: 100%;
+  display: block; 
+}
+
+details p {
+  margin: 0;
+  padding-top: 10px;
 }
 
 summary {
