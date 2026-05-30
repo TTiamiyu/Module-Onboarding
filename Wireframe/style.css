@@ -44,7 +44,7 @@ footer {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  grid-template-columns: 1fr 1fr; 
   gap: var(--space);
   max-width: var(--container);
   margin: 0 auto;
