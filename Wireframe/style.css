@@ -22,8 +22,7 @@ a {
   max-width: fit-content;
   text-decoration: underline;
 }
-img,
-svg {
+img.svg {
   width: 100%;
   object-fit: cover;
 }
@@ -57,6 +56,8 @@ main > *:first-child {
 article {
   border: var(--line);
   padding-bottom: var(--space);
+  padding-left: var(--space);
+  padding-right: var(--space);
   text-align: left;
   display: flex; 
   flex-direction: column;
@@ -70,6 +71,7 @@ article img {
 details p {
   margin: 0;
   padding-top: 10px;
+  padding-left: var(--space);
 }
 
 summary {
