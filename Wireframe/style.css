@@ -27,10 +27,6 @@ img.svg {
   object-fit: cover;
 }
 
-main {
-  max-width: var(--container);
-  margin: 0 auto calc(var(--space) * 4) auto;
-}
 footer {
   position: fixed;
   bottom: 0;
@@ -47,6 +43,8 @@ main {
   gap: var(--space);
   max-width: var(--container);
   margin: 0 auto;
+  max-width: var(--container);
+  margin: 0 auto calc(var(--space) * 4) auto;
 }
 
 main > *:first-child {
